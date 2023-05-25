@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bienvenidos a la pagina de registro de usuarios</h1>
+    Email: <input type="email" placeholder="Ingrese su email" ><br>
+    Password: <input type="password" placeholder="Ingrese su contraseña" ><br>
+    <input type="submit" value="Registrar">
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyAqK1RiP6WdHwymAUcg4qaXykbNMkILFW4",
+          authDomain: "studentappweb.firebaseapp.com",
+          projectId: "studentappweb",
+          storageBucket: "studentappweb.appspot.com",
+          messagingSenderId: "847910179492",
+          appId: "1:847910179492:web:9d73f601469189a7a1cc31"
+        };
+        const email = "victor.velepucha@epn.edu.ec";
+        const password = "12345678";
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+
+        // Initialize Firebase Authentication and get a reference to the service
+        //import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-auth.js"
+
+        const auth = getAuth();
+        createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            // Signed in
+            const user = userCredential.user;
+            console.log(user);
+            // ...
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log(errorCode, errorMessage);
+            // ..
+        });
+
+
+
+      </script>
+</body>
+</html>

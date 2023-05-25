@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f1f1f1;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-group input {
+      width: 80%;
+      padding: 10px 35px 10px 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .form-group .icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    .form-group button {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      background-color: #4CAF50;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Sign Up</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <img src="email-icon.png" alt="Email Icon">
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <img src="password-icon.png" alt="Password Icon">
+      </div>
+      <div class="form-group">
+        <button type="submit">Sign Up</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
